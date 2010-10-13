@@ -9,3 +9,8 @@ shelltitle "sh"
 #hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
 
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
+

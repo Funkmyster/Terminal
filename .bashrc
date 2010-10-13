@@ -52,7 +52,7 @@ fi
 
 
 
-
+# shortcuts for colors!
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
@@ -105,6 +105,7 @@ xterm*|rxvt*)
     ;;
 esac
 
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -115,6 +116,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias tree='tree -C'
 fi
 
 # some more ls aliases
@@ -126,9 +128,7 @@ alias    work='screen -c /home/jsilva/.screenworkrc'
 alias station='screen -c /home/jsilva/.screenworkstationrc'
 
 alias vim="/usr/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
-
-export MYSQL_PS1="MySQL [$USER@$HOSTNAME] [\U] [\d] [\r:\m:\s \P] [\c]: "
-
+alias python="/usr/bin/python -B "
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -137,6 +137,9 @@ export MYSQL_PS1="MySQL [$USER@$HOSTNAME] [\U] [\d] [\r:\m:\s \P] [\c]: "
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -156,3 +159,5 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
+export PATH=$PATH:/opt/java/jdk1.6.0_21/bin/
+export MYSQL_PS1="MySQL [$USER@$HOSTNAME] [\U] [\d] [\r:\m:\s \P] [\c]: "
