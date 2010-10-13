@@ -1,0 +1,79 @@
+startup_message off
+vbell off
+activity "Activity in %t(%n)"
+shelltitle "sh"
+ 
+defscrollback 10000
+ 
+#correct overwriting
+altscreen on
+ 
+#caption always "%{= bb}%{+b w}%n %h %=%t %c"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+ 
+hardstatus string '%{= kG}[ %{G}%H %{g}][ %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+ 
+#Function key 0        k0
+#Function key 1        k1
+#Function key 2        k2
+#Function key 3        k3
+#Function key 4        k4
+#Function key 5        k5
+#Function key 6        k6
+#Function key 7        k7
+#Function key 8        k8
+#Function key 9        k9
+#Function key 10       k;
+#Function key 11       F1
+#Function key 12       F2
+ 
+bind j focus down
+bind k focus up
+bind t focus top 
+bind b focus bottom
+ 
+bindkey -k k5 layout select "main"              #F5
+ 
+bindkey -k k9 layout prev                       #F9
+bindkey -k k; layout next                       #F10
+ 
+# screen -t title order command //group
+screen -t Bash 0
+ 
+# create item 1
+screen -t group1 //group
+chdir /home/www-data/group1
+setenv SCREENID 0
+screen -t Bash          2 
+screen -t Vim           3
+screen -t MySQL         4
+screen -t Log           5
+ 
+# create item 6
+select 0
+screen  -t group2 //group
+chdir /home/www-data/group2
+setenv SCREENID 1
+screen -t Bash          7
+screen -t Vim           8
+screen -t MySQL         9
+screen -t Log           10
+ 
+ 
+select 0
+ 
+# create layouts
+layout new main
+select 0
+ 
+layout new group1
+select 2
+ 
+layout new group2
+select 7
+ 
+layout select "main"
+chdir /home/jsilva
+
+select 0

@@ -1,0 +1,11 @@
+startup_message off
+vbell off
+
+activity "Activity in %t(%n)"
+
+shelltitle "sh"
+
+#caption always "%{= bb}%{+b w}%n %h %=%t %c"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+

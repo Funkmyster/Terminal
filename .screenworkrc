@@ -1,0 +1,17 @@
+startup_message off
+vbell off
+
+activity "Activity in %t(%n)"
+
+shelltitle "sh"
+
+#caption always "%{= bb}%{+b w}%n %h %=%t %c"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+
+screen -t Bash	0
+screen -t Vim	1
+screen -t MySQL	2
+screen -t Logs	3
+
+select 0
