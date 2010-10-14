@@ -30,3 +30,5 @@ syntax on		"turn on syntax highlighting
 "set wildmenu		"In help system"
 autocmd BufRead,BufNewFile *.help set filetype=help
 autocmd BufRead,BufNewFile *.tags set filetype=tags
+autocmd BufRead,BufNewFile *.pde  set filetype=c
+
