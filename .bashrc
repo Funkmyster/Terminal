@@ -166,3 +166,9 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 export PATH=$PATH:/opt/java/jdk1.6.0_21/bin/
 export MYSQL_PS1="MySQL [$USER@$HOSTNAME] [\U] [\d] [\r:\m:\s \P] [\c]: "
+
+
+PYTHONSTARTUP=~/.pythonrc.py
+export PYTHONSTARTUP
+export EDITOR="/usr/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
+
