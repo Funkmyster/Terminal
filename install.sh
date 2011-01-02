@@ -1,6 +1,8 @@
-cp .bashrc	/home/jsilva/.bashrc
-cp .pythonrc.py	/home/jsilva/.pythonrc.py
-cp .screenrc	/home/jsilva/.screenrc
-cp .screenworkrc	/home/jsilva/.screenworkrc
-cp .screenworkstationrc	/home/jsilva/.screenworkstationrc
-cp .vimrc	/home/jsilva/.vimrc
+#!/bin/bash
+
+cp .bashrc		~/.bashrc
+cp .pythonrc.py		~/.pythonrc.py
+cp .screenrc		~/.screenrc
+cp .screenworkrc	~/.screenworkrc
+cp .screenworkstationrc	~/.screenworkstationrc
+cp .vimrc		~/.vimrc
