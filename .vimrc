@@ -7,6 +7,7 @@ set number		"Display line numbers"
 
 
 set smarttab
+filetype plugin indent on "This helps python tabbing
 set autoindent
 set smartindent
 
