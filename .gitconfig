@@ -1,0 +1,16 @@
+[user]
+	name	= Jacob Silva
+	email	= questforall@gmail.com
+
+[color]
+	ui	= auto
+
+[core]
+	pager	= less -FRSX
+	editor	= vim -c ':normal gg'
+
+[merge]
+	tool	= vimdiff
+
+[commit]
+	template = ~/.git.commit.template
