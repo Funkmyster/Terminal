@@ -6,6 +6,7 @@ cp .screenrc		~/.screenrc
 cp .screenworkrc	~/.screenworkrc
 cp .screenworkstationrc	~/.screenworkstationrc
 cp .vimrc		~/.vimrc
+cp .inputrc		~/.inputrc
 
 
 cp .gitconfig		~/.gitconfig
