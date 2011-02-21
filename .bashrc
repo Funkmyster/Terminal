@@ -145,7 +145,7 @@ fi
 
 
 
-DJANGO_HOME=/home/jsilva/Projects/Django
+DJANGO_HOME=/home/jsilva/Libs/Django
 source $DJANGO_HOME/extras/django_bash_completion
 
 # enable programmable completion features (you don't need to enable
