@@ -3,6 +3,7 @@
 cp .bashrc		~/.bashrc
 cp .pythonrc.py		~/.pythonrc.py
 cp .screenrc		~/.screenrc
+cp .screenfarmrc	~/.screenfarmrc
 cp .screenworkrc	~/.screenworkrc
 cp .screenworkstationrc	~/.screenworkstationrc
 cp .vimrc		~/.vimrc

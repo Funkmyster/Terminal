@@ -1,0 +1,82 @@
+startup_message off
+vbell off
+activity "Activity in %t(%n)"
+shelltitle "sh"
+ 
+defscrollback 10000
+ 
+#correct overwriting
+altscreen on
+ 
+#caption always "%{= bb}%{+b w}%n %h %=%t %c"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A%D, %M/%d/%Y "
+ 
+hardstatus string '%{= kG}[ %{G}%H %{g}][ %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+ 
+#Function key 0		k0
+#Function key 1		k1
+#Function key 2		k2
+#Function key 3		k3
+#Function key 4		k4
+#Function key 5		k5
+#Function key 6		k6
+#Function key 7		k7
+#Function key 8		k8
+#Function key 9		k9
+#Function key 10	k;
+#Function key 11	F1
+#Function key 12	F2
+
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
+
+bindkey -k k5 layout select "main"#F5
+bindkey -k k6 layout select "group1"#F6
+bindkey -k k7 layout select "group2"#F7
+
+bindkey -k F2 layout prev #F9
+bindkey -k F1 layout next #F10
+
+# screen -t title order command //group
+chdir /home/jsilva/Projects/Farm
+screen -t Git 0
+
+# create item 1
+screen -t AssistantSys //group
+chdir /home/jsilva/Projects/Farm/Tech/AssistantSystem/Software/Applications
+setenv SCREENID 0
+screen -t Bash		2
+screen -t Vim		3
+screen -t Test		4
+screen -t Bash		5
+
+# create item 6
+select 0
+screen -t RepositorySys //group
+chdir /home/jsilva/Projects/Farm/Tech/RepositorySystem/Software/Applications/ResearchInterface/
+setenv SCREENID 1
+screen -t Bash		7
+screen -t Server	8
+screen -t Vim		9
+screen -t MySQL		10
+
+
+select 0
+
+# create layouts
+layout new main
+select 0
+
+layout new group1
+select 2
+
+layout new group2
+select 7
+
+layout select "main"
+chdir /home/jsilva
+
+select 0
