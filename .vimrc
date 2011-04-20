@@ -33,3 +33,8 @@ autocmd BufRead,BufNewFile *.help set filetype=help
 autocmd BufRead,BufNewFile *.tags set filetype=tags
 autocmd BufRead,BufNewFile *.pde  set filetype=c
 autocmd BufRead,BufNewFile *.html set filetype=htmldjango
+
+" for vimoutliner
+" install with vim-addons install vimoutliner
+autocmd BufRead,BufNewFile *.otl colorscheme vo_dark
+autocmd BufRead,BufNewFile *.otl set number!
