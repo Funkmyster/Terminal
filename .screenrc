@@ -2,11 +2,15 @@ startup_message off
 vbell off
 activity "Activity in %t(%n)"
 shelltitle "sh"
-defscrollback 10000
+defscrollback 1000
 
-#caption always "%{= bb}%{+b w}%n %h %=%t %c"
-#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
-hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+# When you open a text editor in screen and then close it, the text may stay visible in your terminal. This fixes that
+altscreen on
+
+#hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+
+caption     always        "%{+b rk}%H%{gk} | %c %{yk}%D, %M/%d/%Y | %72=Load: %l %{wk}"
+hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
 
 bind j focus down
 bind k focus up
