@@ -27,18 +27,25 @@ colorscheme default
 syntax on		"turn on syntax highlighting
 
 
+" for vimdiff
+if &diff
+	colorscheme evening
+endif
 
 "set wildmenu		"In help system"
 autocmd BufRead,BufNewFile *.help set filetype=help
 autocmd BufRead,BufNewFile *.tags set filetype=tags
 autocmd BufRead,BufNewFile *.pde  set filetype=c
 autocmd BufRead,BufNewFile *.html set filetype=htmldjango
+autocmd BufRead,BufNewFile *.m set filetype=mumps
+autocmd BufRead,BufNewFile *.mxml set filetype=xml
+autocmd BufRead,BufNewFile *.as set filetype=javascript
 
 " for vimoutliner
 " install with vim-addons install vimoutliner
 autocmd BufRead,BufNewFile *.otl colorscheme vo_dark
 autocmd BufRead,BufNewFile *.otl set number!
 
-
+" for vim-fugitive
 autocmd BufReadPost fugitive://* set bufhidden=delete
 autocmd BufReadPost fugitive://* set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
