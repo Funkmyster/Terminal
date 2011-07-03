@@ -1,5 +1,6 @@
 " for pathogen
 call pathogen#infect()
+call pathogen#helptags()
 
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
 
