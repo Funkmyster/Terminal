@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git submodule init
+git submodule update
+
 rm ~/.inputrc
 ln -s ~/Libs/Terminal/readline/inputrc ~/.inputrc
 
