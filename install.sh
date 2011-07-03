@@ -18,6 +18,12 @@ ln -s ~/Libs/Terminal/screen/screenrc ~/.screenrc
 rm ~/.screenfarmrc
 ln -s ~/Libs/Terminal/screen/screenfarmrc ~/.screenfarmrc
 
+rm ~/.screenworkrc
+ln -s ~/Libs/Terminal/screen/screenworkrc ~/.screenworkrc
+
+rm ~/.screenworkstationrc
+ln -s ~/Libs/Terminal/screen/screenworkstationrc ~/.screenworkstationrc
+
 rm ~/.gitconfig
 ln -s ~/Libs/Terminal/git/gitconfig ~/.gitconfig
 
