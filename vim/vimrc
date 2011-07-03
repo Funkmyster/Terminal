@@ -1,5 +1,5 @@
 " for pathogen
-call pathogen#runtime_append_all_bundles() 
+call pathogen#infect()
 
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
 
