@@ -1,3 +1,6 @@
+" for pathogen
+call pathogen#runtime_append_all_bundles() 
+
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
 
 set showcmd		"Show (partial) command in status line"
@@ -32,7 +35,7 @@ if &diff
 	colorscheme evening
 endif
 
-"set wildmenu		"In help system"
+" set wildmenu		"In help system"
 autocmd BufRead,BufNewFile *.help set filetype=help
 autocmd BufRead,BufNewFile *.tags set filetype=tags
 autocmd BufRead,BufNewFile *.pde  set filetype=c
@@ -49,3 +52,4 @@ autocmd BufRead,BufNewFile *.otl set number!
 " for vim-fugitive
 autocmd BufReadPost fugitive://* set bufhidden=delete
 autocmd BufReadPost fugitive://* set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
