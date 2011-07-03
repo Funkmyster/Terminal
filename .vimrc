@@ -38,3 +38,7 @@ autocmd BufRead,BufNewFile *.html set filetype=htmldjango
 " install with vim-addons install vimoutliner
 autocmd BufRead,BufNewFile *.otl colorscheme vo_dark
 autocmd BufRead,BufNewFile *.otl set number!
+
+
+autocmd BufReadPost fugitive://* set bufhidden=delete
+autocmd BufReadPost fugitive://* set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
