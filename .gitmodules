@@ -7,3 +7,6 @@
 [submodule "vim/vim/bundle/vimoutliner"]
 	path = vim/vim/bundle/vimoutliner
 	url = git://github.com/vimoutliner/vimoutliner.git
+[submodule "vim/vim-latex"]
+	path = vim/vim-latex
+	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex

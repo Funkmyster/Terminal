@@ -8,11 +8,11 @@ defscrollback 10000
 #correct overwriting
 altscreen on
  
-#caption always "%{= bb}%{+b w}%n %h %=%t %c"
-#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
-hardstatus alwayslastline "%{=b}%{G} Screen(s): %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
- 
-hardstatus string '%{= kG}[ %{G}%H %{g}][ %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+backtick 51 1 1 mocp --format "Moc [%artist] [%album] [%song] [%tl]"
+caption always "%{wk} %{W}%51`%{-} %{B}|%{-} %= %{g}[%{-}%{wk}Load: %l %{g}]%{-}"
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][ %{W}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
  
 #Function key 0        k0
 #Function key 1        k1
@@ -33,33 +33,53 @@ bind k focus up
 bind t focus top 
 bind b focus bottom
  
-bindkey -k k5 layout select "main"              #F5
+bindkey -k k5 layout select "main"
+bindkey -k k6 layout select "group1"
+bindkey -k k7 layout select "group2"
+bindkey -k k8 layout select "group3"
  
-bindkey -k k9 layout prev                       #F9
-bindkey -k k; layout next                       #F10
+#bindkey -k k6 layout prev
+#bindkey -k k9 layout next
+
+
  
 # screen -t title order command //group
+setenv SCREENID Main-
 screen -t Bash 0
  
+# Cables
 # create item 1
-screen -t group1 //group
-chdir /home/www-data/group1
-setenv SCREENID 0
-screen -t Bash          2 
+select 0
+screen -t Cables //group
+chdir /home/www-data/cablesandkits
+setenv SCREENID Cables-
+screen -t Bash          2
 screen -t Vim           3
 screen -t MySQL         4
 screen -t Log           5
  
+# Salty
 # create item 6
 select 0
-screen  -t group2 //group
-chdir /home/www-data/group2
-setenv SCREENID 1
+screen -t Salty //group
+chdir /home/jsilva/Work/saltyclown
+setenv SCREENID Salty-
 screen -t Bash          7
 screen -t Vim           8
 screen -t MySQL         9
 screen -t Log           10
  
+# Farm
+# create item 11
+select 0
+screen -t Farm //group
+chdir /home/jsilva/Projects/Farm
+setenv SCREENID Farm-
+screen -t Bash          12
+screen -t Vim           13
+screen -t IPython       14
+screen -t Log           15
+screen -t TODO          16
  
 select 0
  
@@ -72,6 +92,9 @@ select 2
  
 layout new group2
 select 7
+ 
+layout new group3
+select 12
  
 layout select "main"
 chdir /home/jsilva
