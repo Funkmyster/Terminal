@@ -6,7 +6,7 @@ set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servernam
 
 set showcmd		"Show (partial) command in status line"
 set laststatus=2	"Always disp statusline"
-set statusline=%F%m%r%h%w\ [FILETYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [FILETYPE=%Y]\[LINE=%04l][%p%%]
 set number		"Display line numbers"
 
 
@@ -39,14 +39,14 @@ endif
 " set wildmenu		"In help system"
 autocmd BufRead,BufNewFile *.help set filetype=help
 autocmd BufRead,BufNewFile *.tags set filetype=tags
-autocmd BufRead,BufNewFile *.pde  set filetype=c
+
+autocmd BufRead,BufNewFile *.pde  set filetype=c		" for arduino
 autocmd BufRead,BufNewFile *.html set filetype=htmldjango
-autocmd BufRead,BufNewFile *.m set filetype=mumps
+autocmd BufRead,BufNewFile *.m    set filetype=mumps
 autocmd BufRead,BufNewFile *.mxml set filetype=xml
-autocmd BufRead,BufNewFile *.as set filetype=javascript
+autocmd BufRead,BufNewFile *.as   set filetype=javascript	" for ActionScript
 
 " for vimoutliner
-" install with vim-addons install vimoutliner
 autocmd BufRead,BufNewFile *.otl colorscheme vo_dark
 autocmd BufRead,BufNewFile *.otl set number!
 
@@ -54,4 +54,8 @@ autocmd BufRead,BufNewFile *.otl set number!
 autocmd BufReadPost fugitive://* set bufhidden=delete
 autocmd BufReadPost fugitive://* set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" for php
 autocmd BufRead,BufNewFile *.php noremap <C-l> :!php -l %<CR>
+
+" for LaTex
+autocmd BufRead,BufNewFile *.tex TTarget pdf
