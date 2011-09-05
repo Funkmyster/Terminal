@@ -1,0 +1,36 @@
+startup_message off
+vbell off
+activity "Activity in %t(%n)"
+shelltitle "sh"
+defscrollback 10000
+
+#correct overwriting
+altscreen on
+
+
+caption always '%{= kG}[ %{G}%H %{g}][ %{W}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+backtick 51 1 1 mocp --format "Moc [%artist] [%album] [%song] [%tl]"
+backtick 52 5 5 /home/jsilva/Libs/Terminal/screen/mem.sh
+hardstatus alwayslastline
+hardstatus string "%{= kG}%{W}%51`%{-} %{B}|%{-} %= %{kG}[%{-}%{W}Load: %l %{g}]%{-} %{B}|%{-} %{g}[%{-}%{W}%52`%{-}%{g}]%{-}"
+
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
+
+bindkey "\061" exec mocp --pause
+bindkey "\062" exec mocp --clear
+bindkey "\063" exec mocp --unpause
+bindkey "\064" exec mocp --prev
+bindkey "\065" exec mocp --play
+bindkey "\066" exec mocp --next
+
+
+screen -t Bash	0
+screen -t Vim	1
+screen -t MySQL	2
+screen -t Logs	3
+
+select 0
