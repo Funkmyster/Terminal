@@ -131,6 +131,7 @@ alias l='ls -CF'
 
 alias    work='screen -c ~/Libs/Terminal/screen/work.screen'
 alias station='screen -c ~/Libs/Terminal/screen/workstation.screen'
+alias    farm='screen -c ~/Libs/Terminal/screen/farm.screen'
 
 alias vim="/usr/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
 alias python="/usr/bin/python -B "

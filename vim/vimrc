@@ -60,3 +60,6 @@ autocmd BufRead,BufNewFile *.php noremap <C-l> :!php -l %<CR>
 " for LaTex
 autocmd BufRead,BufNewFile *.tex set filetype=tex
 autocmd BufRead,BufNewFile *.tex TTarget pdf
+
+" for screen
+autocmd BufRead,BufNewFile *.screen set filetype=screen
