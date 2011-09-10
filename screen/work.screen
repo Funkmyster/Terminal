@@ -20,13 +20,13 @@ bind k focus up
 bind t focus top
 bind b focus bottom
 
-bindkey "\061" exec mocp --pause
-bindkey "\062" exec mocp --clear
-bindkey "\063" exec mocp --unpause
-bindkey "\064" exec mocp --prev
-bindkey "\065" exec mocp --play
-bindkey "\066" exec mocp --next
 
+bindkey "^[[4~"   exec mocp --pause
+bindkey "^[[1;3B" exec mocp --clear
+bindkey "^[[6;3~" exec mocp --unpause
+bindkey "^[[1;3D" exec mocp --prev
+bindkey "^[[E"    exec mocp --play
+bindkey "^[[1;3C" exec mocp --next
 
 screen -t Bash	0
 screen -t Vim	1

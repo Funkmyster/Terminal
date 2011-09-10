@@ -63,3 +63,6 @@ autocmd BufRead,BufNewFile *.tex TTarget pdf
 
 " for screen
 autocmd BufRead,BufNewFile *.screen set filetype=screen
+
+" for python
+autocmd BufRead,BufNewFile *.py noremap <C-l> :!pylint --errors-only %<CR>
