@@ -147,8 +147,8 @@ fi
 
 
 
-DJANGO_HOME=~/Libs/Django
-if [ -d DJANGO_HOME ] ; then
+export DJANGO_HOME=~/Libs/Django
+if [ -d $DJANGO_HOME ] ; then
 	source $DJANGO_HOME/extras/django_bash_completion
 fi
 
