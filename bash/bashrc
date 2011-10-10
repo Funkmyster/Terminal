@@ -148,7 +148,7 @@ fi
 
 
 DJANGO_HOME=~/Libs/Django
-if [ -f DJANGO_HOME ] ; then
+if [ -d DJANGO_HOME ] ; then
 	source $DJANGO_HOME/extras/django_bash_completion
 fi
 
