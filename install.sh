@@ -2,6 +2,7 @@
 
 git submodule init
 git submodule update
+git submodule foreach git pull
 
 rm ~/.inputrc
 ln -s ~/Libs/Terminal/readline/inputrc ~/.inputrc
