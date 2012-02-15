@@ -157,7 +157,8 @@ fi
 
 export DJANGO_HOME=~/Libs/Django
 if [ -d $DJANGO_HOME ] ; then
-	source $DJANGO_HOME/extras/django_bash_completion
+	#source $DJANGO_HOME/extras/django_bash_completion
+	source ~/Libs/Terminal/django/bash_completion
 fi
 
 # enable programmable completion features (you don't need to enable
