@@ -26,4 +26,9 @@ rm ~/.vimrc
 ln -s ~/Libs/Terminal/vim/vimrc ~/.vimrc
 
 rm -rf ~/.vim
-ln -s ~/Libs/Terminal/vim/vim ~/.vim
+mkdir -p ~/.vim/autoload/
+
+mkdir ~/.vim/autoload/pathogen
+ln -s ~/Libs/Terminal/vim/pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim
+
+ln -s ~/Libs/Terminal/vim/vim/bundle ~/.vim/bundle

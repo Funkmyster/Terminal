@@ -15,6 +15,10 @@ filetype plugin indent on "This helps python tabbing
 set autoindent
 set smartindent
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 
 set hlsearch		"Highlight search results"
 set incsearch		"Increment search as I type"

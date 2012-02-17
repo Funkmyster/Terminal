@@ -10,3 +10,6 @@
 [submodule "vim/vim-latex"]
 	path = vim/vim-latex
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
+[submodule "vim/vim/bundle/vim-bufexplorer"]
+	path = vim/vim/bundle/vim-bufexplorer
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
