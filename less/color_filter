@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case "$1" in
+    *.awk|*.java|*.js|*.php|*.sh|*.inc|*.ch|*.xml|*.diff|*.patch|*.py|*.sql)
+        pygmentize -f 256 "$1";;
+        ;;
+    *)
+        pygmentize -f 256 -l sh "$1"
+        grep 
