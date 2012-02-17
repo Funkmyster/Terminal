@@ -66,3 +66,8 @@ autocmd BufRead,BufNewFile *.screen set filetype=screen
 
 " for python
 autocmd BufRead,BufNewFile *.py noremap <C-l> :!pylint --errors-only %<CR>
+
+
+" for TaskJuggler
+autocmd BufRead,BufNewFile *.tjp,*.tji set filetype=tjp
+autocmd BufRead,BufNewFile *.tjp,*.tji noremap <C-l> :!tj3 --check-syntax %<CR>
