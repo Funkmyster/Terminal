@@ -10,6 +10,9 @@ ln -s ~/Libs/Terminal/readline/inputrc ~/.inputrc
 rm ~/.bashrc
 ln -s ~/Libs/Terminal/bash/bashrc  ~/.bashrc
 
+rm ~/.bash_profile
+ln -s ~/Libs/Terminal/bash/bash_profile ~/.bash_profile
+
 rm ~/.pythonrc.py
 ln -s ~/Libs/Terminal/python/pythonrc.py ~/.pythonrc.py
 
