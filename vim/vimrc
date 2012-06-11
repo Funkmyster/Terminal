@@ -30,6 +30,7 @@ set nobackup		"Use Git instead..."
 set nowritebackup
 set noswapfile
 
+set undoreload=0    "now use :edit to reset undo history for file"
 
 colorscheme default
 syntax on		"turn on syntax highlighting
