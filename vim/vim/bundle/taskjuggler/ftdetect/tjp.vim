@@ -1,2 +1,0 @@
-augroup filetypedetect
-augroup END
