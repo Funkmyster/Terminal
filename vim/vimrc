@@ -1,17 +1,40 @@
-" for pathogen
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+Bundle 'tpope/vim-fugitive'
+Bundle 'nvie/vim-rst-tables'
+Bundle 'vimoutliner/vimoutliner'
+
+" ...
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
 
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
 
 set showcmd		"Show (partial) command in status line"
 set laststatus=2	"Always disp statusline"
 set statusline=%F%m%r%h%w\ [FILETYPE=%Y]\[LINE=%04l][%p%%]
-"set number		"Display line numbers"
-
 
 set smarttab
-filetype plugin indent on "This helps python tabbing
 set autoindent
 set smartindent
 
@@ -74,7 +97,3 @@ autocmd BufRead,BufNewFile *.py noremap <C-l> :!clear ; pylint --errors-only %<C
 
 "for javascript
 autocmd BufRead,BufNewFile *.js noremap <C-l> :!clear ; /home/jsilva/bin/jslint --color --browser true --predef '$' %<CR>
-
-" for TaskJuggler
-autocmd BufRead,BufNewFile *.tjp,*.tji set filetype=tjp
-autocmd BufRead,BufNewFile *.tjp,*.tji noremap <C-l> :!tj3 --check-syntax %<CR>
