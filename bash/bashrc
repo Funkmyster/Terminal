@@ -187,3 +187,6 @@ export PYTHONSTARTUP
 export EDITOR="/usr/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
 export EDITOR="/usr/local/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+source /usr/local/bin/virtualenvwrapper.sh

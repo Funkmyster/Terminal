@@ -13,3 +13,6 @@
 [submodule "vim/vim/bundle/vim-bufexplorer"]
 	path = vim/vim/bundle/vim-bufexplorer
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "vim/vim/bundle/vim-rst-tables"]
+	path = vim/vim/bundle/vim-rst-tables
+	url = https://github.com/nvie/vim-rst-tables
