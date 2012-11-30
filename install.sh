@@ -35,3 +35,5 @@ mkdir ~/.vim/autoload/pathogen
 ln -s ~/Libs/Terminal/vim/pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim
 
 ln -s ~/Libs/Terminal/vim/vim/bundle ~/.vim/bundle
+
+vi -c "BundleClean!" -c "BundleInstall!" -c "qall"
