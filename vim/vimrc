@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
 Bundle 'nvie/vim-rst-tables'
 Bundle 'vimoutliner/vimoutliner'
 
