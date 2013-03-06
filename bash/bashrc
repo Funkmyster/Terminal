@@ -185,7 +185,6 @@ export MYSQL_PS1="MySQL [$USER@$HOSTNAME] [\U] [\d] [\r:\m:\s \P] [\c]: "
 PYTHONSTARTUP=~/.pythonrc.py
 export PYTHONSTARTUP
 export EDITOR="/usr/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
-export EDITOR="/usr/local/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
