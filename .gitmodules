@@ -1,3 +1,6 @@
 [submodule "vim/vim/bundle/vundle"]
 	path = vim/vim/bundle/vundle
 	url = https://github.com/gmarik/vundle
+[submodule "bash/vagrant-bash-completion.git"]
+	path = bash/vagrant-bash-completion.git
+	url = git://github.com/kura/vagrant-bash-completion.git

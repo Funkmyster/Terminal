@@ -189,3 +189,5 @@ export EDITOR="/usr/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-sil
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
+
+source ~/Libs/Terminal/bash/vagrant-bash-completion.git/vagrant
