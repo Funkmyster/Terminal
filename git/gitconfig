@@ -10,9 +10,11 @@
 	editor	= vim -c ':normal gg'
 
 [merge]
-	tool	= vimdiff
+	tool = fugitive
 
 [commit]
 	template = ~/.git.commit.template
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
