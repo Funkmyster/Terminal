@@ -14,6 +14,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'nvie/vim-rst-tables'
 Bundle 'vimoutliner/vimoutliner'
+Bundle 'scrooloose/nerdtree'
+
+Bundle 'Lokaltog/powerline'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
 
 " ...
 
@@ -28,12 +33,20 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
-
-set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
-
-set showcmd		"Show (partial) command in status line"
 set laststatus=2	"Always disp statusline"
-set statusline=%F%m%r%h%w\ [FILETYPE=%Y]\[LINE=%04l][%p%%]
+if has("gui_running")
+    colorscheme evening
+    set rtp+=~/Libs/Terminal/vim/vim/bundle/powerline/powerline/bindings/vim
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+else
+    colorscheme default
+    set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
+    set showcmd		"Show (partial) command in status line"
+    set statusline=%F%m%r%h%w\ [FILETYPE=%Y]\[LINE=%04l][%p%%]
+endif
+
 
 set smarttab
 set autoindent
@@ -56,7 +69,6 @@ set noswapfile
 
 set undoreload=0    "now use :edit to reset undo history for file"
 
-colorscheme default
 syntax on		"turn on syntax highlighting
 
 
