@@ -19,6 +19,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Funkmyster/vim-chef'
 
 " ...
 
@@ -110,3 +111,6 @@ autocmd BufRead,BufNewFile *.py noremap <C-l> :!clear ; pylint --errors-only %<C
 
 "for javascript
 autocmd BufRead,BufNewFile *.js noremap <C-l> :!clear ; /home/jsilva/bin/jslint --color --browser true --predef '$' %<CR>
+
+"for opscode chef
+autocmd BufRead,BufNewFile *.rb call Chef_Helper()
