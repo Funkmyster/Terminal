@@ -137,6 +137,7 @@ alias station='screen -c ~/Libs/Terminal/screen/workstation.screen'
 alias    farm='screen -c ~/Libs/Terminal/screen/farm.screen'
 
 alias vim="/usr/bin/vim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
+alias gvim="/usr/bin/gvim --servername JSILVA-$PPID-$SCREENID --remote-tab-silent"
 
 alias python="/usr/bin/python -B "
 
@@ -191,3 +192,11 @@ export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/Libs/Terminal/bash/vagrant-bash-completion.git/vagrant
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm
+
+function git_push_current_branch() {
+BRANCH=`git branch | grep \* | awk '{print $2}'`
+git push fork $BRANCH
+}

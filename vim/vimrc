@@ -19,6 +19,17 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
+
+" vim-snipmate depedencies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+
+Bundle "garbas/vim-snipmate"
+"Bundle "vadv/vim-chef"
+
+
+
 Bundle 'Funkmyster/vim-chef'
 
 " ...
@@ -41,6 +52,7 @@ if has("gui_running")
     set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=e  "make gui tab menu more like console tab menu // This solves horizontal overlapping spacing issues
 else
     colorscheme default
     set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
@@ -79,6 +91,10 @@ if &diff
 endif
 
 " set wildmenu		"In help system"
+
+" Disable auto commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 autocmd BufRead,BufNewFile *.help set filetype=help
 autocmd BufRead,BufNewFile *.tags set filetype=tags
 
@@ -112,5 +128,8 @@ autocmd BufRead,BufNewFile *.py noremap <C-l> :!clear ; pylint --errors-only %<C
 "for javascript
 autocmd BufRead,BufNewFile *.js noremap <C-l> :!clear ; /home/jsilva/bin/jslint --color --browser true --predef '$' %<CR>
 
-"for opscode chef
-autocmd BufRead,BufNewFile *.rb call Chef_Helper()
+" for opscode chef
+"autocmd BufRead,BufNewFile *.rb call Chef_Helper()
+
+" for ruby
+autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
